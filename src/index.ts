@@ -9,6 +9,10 @@ const server = new ApolloServer({
   dataSources: (): any => {
     return { spaceTradersAPI: new SpaceTradersAPI() };
   },
+  context: ({ req }) => {
+    const token = req.headers.authorization || "";
+    return { token };
+  },
 });
 
 server.listen().then(({ url }) => {
