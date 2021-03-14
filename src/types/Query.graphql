@@ -1,0 +1,6 @@
+type Query {
+  user(username: String!, token: String!): User!
+  loans: [Loan]!
+  ships: [Ship]!
+  locations: [Location]!
+}

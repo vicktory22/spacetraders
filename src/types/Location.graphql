@@ -1,0 +1,7 @@
+type Location {
+  name: String!
+  symbol: String!
+  type: String!
+  x: Int!
+  y: Int!
+}

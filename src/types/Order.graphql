@@ -1,0 +1,6 @@
+type Order {
+  good: String!
+  pricePerUnit: Int!
+  quantity: Int!
+  total: Int!
+}

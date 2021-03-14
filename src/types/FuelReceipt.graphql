@@ -1,0 +1,5 @@
+type FuelReceipt {
+  credits: Int!
+  order: [Order]!
+  ship: Ship!
+}

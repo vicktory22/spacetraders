@@ -1,0 +1,11 @@
+type Ship {
+  id: ID!
+  class: String!
+  manufacturer: String!
+  maxCargo: Int!
+  plating: Int!
+  purchaseLocations: [PurchaseLocation]!
+  speed: Int!
+  type: String!
+  cargo: Cargo
+}

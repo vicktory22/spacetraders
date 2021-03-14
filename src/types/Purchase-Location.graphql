@@ -1,0 +1,4 @@
+type PurchaseLocation {
+  location: String!
+  price: Int!
+}

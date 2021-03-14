@@ -1,0 +1,6 @@
+type User {
+  username: String!
+  credits: Int!
+  ships: [Ship]!
+  loans: [UserLoan]!
+}

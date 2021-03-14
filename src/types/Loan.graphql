@@ -1,0 +1,7 @@
+type Loan {
+  type: LoanType!
+  amount: Int!
+  collateralRequired: Boolean!
+  rate: Float!
+  termInDays: Int
+}

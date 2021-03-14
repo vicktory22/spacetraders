@@ -1,0 +1,7 @@
+type UserLoan {
+  id: ID!
+  due: String!
+  repaymentAmount: Int!
+  status: String!
+  type: LoanType!
+}
