@@ -1,3 +1,8 @@
+enum LoanType {
+  STARTUP
+  ENTERPRISE
+}
+
 type Loan {
   type: LoanType!
   amount: Int!

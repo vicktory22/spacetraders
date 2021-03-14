@@ -1,5 +1,5 @@
 type Ship {
-  id: ID!
+  id: ID
   class: String!
   manufacturer: String!
   maxCargo: Int!
