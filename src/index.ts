@@ -1,5 +1,5 @@
 import { ApolloServer } from "apollo-server";
-import { typeDefs } from "./types";
+import { typeDefs } from "./type-defs";
 import { resolvers } from "./resolvers";
 import { SpaceTradersAPI } from "./api/spacetraders-api";
 

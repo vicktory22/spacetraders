@@ -31,18 +31,18 @@ export class SpaceTradersAPI extends RESTDataSource {
     return this.get(`game/systems/OE/locations`);
   }
 
-  async takeOutLoan(type: string) {
-    return this.post(`users/${process.env.USERNAME}/loans/`, {
+  async takeOutLoan(username: string, type: string) {
+    return this.post(`users/${username}/loans/`, {
       type,
     });
   }
 
-  async purchaseShip(location: string, type: string) {
-    return this.post(`users/${process.env.USERNAME}/ships`, { location, type });
+  async purchaseShip(username: string, location: string, type: string) {
+    return this.post(`users/${username}/ships`, { location, type });
   }
 
-  async purchaseFuel(shipId: number, quantity: number) {
-    return this.post(`users/${process.env.USERNAME}/purchase-orders`, {
+  async purchaseFuel(username: string, shipId: number, quantity: number) {
+    return this.post(`users/${username}/purchase-orders`, {
       shipId,
       good: "FUEL",
       quantity,

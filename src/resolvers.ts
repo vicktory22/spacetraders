@@ -1,10 +1,10 @@
-import { loanResolver } from "./resolvers/loan-resolver";
-import { locationResolver } from "./resolvers/location-resolver";
-import { purchaseFuelResolver } from "./resolvers/purchase-fuel-resolver";
-import { purchaseShipResolver } from "./resolvers/purchase-ship-resolver";
-import { shipResolver } from "./resolvers/ship-resolver";
-import { takeOutLoanResolver } from "./resolvers/take-out-loan-resolver";
-import { userResolver } from "./resolvers/user-resolver";
+import { purchaseFuelResolver } from "./modules/fuel/mutation";
+import { takeOutLoanResolver } from "./modules/loan/mutation";
+import { loanResolver } from "./modules/loan/resolver";
+import { locationResolver } from "./modules/location/resolver";
+import { purchaseShipResolver } from "./modules/ship/mutation";
+import { shipResolver } from "./modules/ship/resolver";
+import { userResolver } from "./modules/user/resolver";
 
 export const resolvers = {
   Query: {
