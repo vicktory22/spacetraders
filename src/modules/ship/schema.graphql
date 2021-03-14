@@ -1,3 +1,9 @@
+input PurchaseShipInput {
+  username: String!
+  location: String!
+  type: String!
+}
+
 type Ship {
   id: ID
   class: String!

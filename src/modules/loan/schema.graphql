@@ -1,3 +1,8 @@
+input TakeOutLoanInput {
+  username: String!
+  type: LoanType!
+}
+
 enum LoanType {
   STARTUP
   ENTERPRISE

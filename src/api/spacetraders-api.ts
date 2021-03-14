@@ -1,4 +1,6 @@
 import { RESTDataSource, RequestOptions } from "apollo-datasource-rest";
+import { TakeOutLoanInput } from "../modules/loan/types";
+import { PurchaseShipInput } from "../modules/ship/types";
 
 enum LoanType {
   STARTUP,
@@ -31,13 +33,15 @@ export class SpaceTradersAPI extends RESTDataSource {
     return this.get(`game/systems/OE/locations`);
   }
 
-  async takeOutLoan(username: string, type: string) {
+  async takeOutLoan(input: TakeOutLoanInput) {
+    const { username, type } = input;
     return this.post(`users/${username}/loans/`, {
       type,
     });
   }
 
-  async purchaseShip(username: string, location: string, type: string) {
+  async purchaseShip(input: PurchaseShipInput) {
+    const { username, location, type } = input;
     return this.post(`users/${username}/ships`, { location, type });
   }
 

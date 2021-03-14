@@ -1,5 +1,5 @@
 type Mutation {
-  takeOutLoan(username: String!, type: LoanType!): User!
-  purchaseShip(location: String!, type: String!): User!
+  takeOutLoan(input: TakeOutLoanInput!): User!
+  purchaseShip(input: PurchaseShipInput): User!
   purchaseFuel(shipId: String!, quantity: Int!): FuelReceipt!
 }

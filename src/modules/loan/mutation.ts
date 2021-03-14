@@ -1,20 +1,10 @@
-enum LoanType {
-  STARTUP,
-}
-
-interface TakeOutLoanInput {
-  username: string;
-  type: LoanType;
-}
+import { TakeOutLoanInput } from "./types";
 
 export async function takeOutLoanResolver(
   _: any,
-  args: TakeOutLoanInput,
+  args: { input: TakeOutLoanInput },
   { dataSources }: Record<string, any>
 ) {
-  const response = await dataSources.spaceTradersAPI.takeOutLoan(
-    args.username,
-    args.type
-  );
+  const response = await dataSources.spaceTradersAPI.takeOutLoan(args.input);
   return response.user;
 }
