@@ -11,8 +11,12 @@ export class SpaceTradersAPI extends RESTDataSource {
     this.baseURL = "https://api.spacetraders.io/";
   }
 
+  willSendRequest(request: RequestOptions) {
+    request.headers.set("Authorization", this.context.token);
+  }
+
   async getUser(username: string, token: string) {
-    return this.get(`users/${username}?token=${token}`);
+    return this.get(`users/${username}`);
   }
 
   async getLoans() {
